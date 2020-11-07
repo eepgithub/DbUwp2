@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="DbUwp2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DbUwp2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1100" Height="1000">
+
+    <Grid Margin="0,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="800" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="mainGrid" Grid.Column="0">
+            <Button x:Name="btnNewProblem" Content="Nytt ärende" VerticalAlignment="top" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0" Click="btnNewProblem_Click" />
+            <Button x:Name="btnOpenProblems" Content="Alla ärenden" VerticalAlignment="top" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0" Click="btnOpenProblems_Click"/>
+            <Button x:Name="btnClosedProblems" Content="Avslutade ärenden" VerticalAlignment="top" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0" Click="btnClosedProblems_Click"/>
+
+        </StackPanel>
+
+
+        <SplitView Grid.Column="1">
+            <SplitView.Content>
+                <Frame x:Name="frame" />
+            </SplitView.Content>
+        </SplitView>
+
+
+
+    </Grid>
+</Page>
